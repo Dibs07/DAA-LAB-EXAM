@@ -43,7 +43,7 @@ void kruskal(int n,int cost[20][20])
         v=find(v);
         if(uni(u,v))
         {
-            printf("\n%d edge (%d,%d) =%d\n",i++,a,b,min);
+            printf("\n%d edge (%d,%d)cost =%d\n",i++,a,b,min);
             mincost+=min;
         }
         cost[a][b]=cost[b][a]=INT_MAX;
@@ -54,7 +54,7 @@ void kruskal(int n,int cost[20][20])
 int main()
 {
     int n,cost[20][20];
-    printf("\nEnter the number of nodes:");
+    printf("\nEnter the number of vertices:");
     scanf("%d",&n);
     printf("\nEnter the cost matrix:\n");
     for(int i=1;i<=n;i++)
