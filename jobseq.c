@@ -18,7 +18,7 @@ int job(int dea[],int pro[],int n,int maxdea,int res[]){
     for(int i=0;i<n;i++){
         vis[i]=0;
     }
-    while(maxdea--){
+    while(maxdea>0){
         for(int i=0;i<n;i++){
             if(pro[i]>max && vis[i]==0){
                 max=pro[i];
@@ -29,6 +29,7 @@ int job(int dea[],int pro[],int n,int maxdea,int res[]){
             if(res[i]==0){
                 res[i]=j+1;
                 tp+=pro[j];
+                maxdea--;
                 break;
             }
         }
